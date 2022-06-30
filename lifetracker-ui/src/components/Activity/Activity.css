@@ -1,0 +1,124 @@
+.title{
+    text-align: center;
+    font-size: 24px;
+    font-family: Courier, monospace ;
+    font-variant: small-caps;
+    font-stretch: ultra-expanded;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around ;
+}
+.more-stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.exercise-div{
+    background-color: #2F97C1;
+    width: 300px;
+    height: 175px;
+}
+.sleep-div{
+    background-color: #BE92A2;
+    width: 300px;
+}
+.nutrition-div{
+    background-color: #cbd19e;
+    width: 300px;
+}
+.calories-div {
+    background-color: green;
+    width: 300px;
+    height: 100px;
+}
+.intensity-div{
+    background-color: white;
+    width: 300px;
+    height: 100px;
+}
+.hours-div {
+    background-color: green;
+    width: 300px;
+    height: 100px;
+}
+
+/* button {
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+} */
+button:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.eBtn{
+    box-shadow: 3px 4px 0px 0px #1564ad;
+	/* background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%); */
+	/* background-color:#79bbff; */
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+    background-color: #2F97C1
+}
+
+.sBtn{
+    box-shadow: 3px 4px 0px 0px #1564ad;
+	/* background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff; */
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+    background-color: #BE92A2;
+}
+
+.nBtn{
+    box-shadow: 3px 4px 0px 0px #1564ad;
+	/* background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff; */
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+    background-color: #cbd19e
+}

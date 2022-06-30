@@ -1,0 +1,43 @@
+
+.navbar {
+    background-color: #432e36;
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #74667A;
+    overflow: hidden;
+    padding: 8px;
+    text-align: center;
+    justify-content: center;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+    padding: 3em;
+    text-align: center;
+    justify-content: center;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+}
+
+li:hover {
+    background-color: #8aa29e;
+}
+
+.closed {
+    display: none;
+}
+
+/* #A26769
+#778472
+#DEDBD8
+#C3C49E */
