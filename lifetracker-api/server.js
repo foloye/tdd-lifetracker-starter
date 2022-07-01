@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(morgan("tiny"))
 
 app.use("/auth", authRoutes)
-// app.use("/nutrition", nutritionRoutes)
+app.use("/nutrition", nutritionRoutes)
 
 app.use((req, res, next) => {
     return next(new NotFoundError())

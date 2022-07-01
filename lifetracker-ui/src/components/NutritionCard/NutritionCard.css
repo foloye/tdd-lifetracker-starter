@@ -1,0 +1,13 @@
+.nutrition-card{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    width: 170px;
+    max-width: 170px;
+    max-height: 250px;
+   
+}
+
+.nPhoto{
+    width: 70%;
+}

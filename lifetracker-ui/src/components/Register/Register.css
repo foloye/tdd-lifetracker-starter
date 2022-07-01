@@ -1,0 +1,13 @@
+.card {
+    background-color: white;
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.Register {
+    display: flex;
+    justify-content: space-around;
+}

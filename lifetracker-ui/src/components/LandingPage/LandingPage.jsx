@@ -4,7 +4,7 @@ import "./LandingPage.css"
 export default function LandingPage() {
   return (
     <div className="landing-page">
-        <h2>Landing Page</h2>
+        {/* <h2>Landing Page</h2> */}
         <div className="center-land">
             <img src="http://codepath-lifetracker.surge.sh/static/media/smartwatch-screen-digital-device.e2983a85.svg" alt="image of smart watch"/>
             <h1 className="title-center">Life Tracker</h1>

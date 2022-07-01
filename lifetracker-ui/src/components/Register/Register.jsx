@@ -174,13 +174,12 @@ export default function Register({ setAppState, loggedIn, setLoggedIn, redirect,
           <button className="btn" disabled={isLoading} onClick={handleOnSubmit}>
             {isLoading ? "Loading..." : "Create Account"}
           </button>
-        </div>
-
-        <div className="footer">
           <p>
             Already have an account? Login <Link to="/login">here</Link>
           </p>
         </div>
+
+    
       </div>
   )
 }

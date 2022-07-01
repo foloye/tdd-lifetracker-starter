@@ -77,7 +77,7 @@ export default function Login({ setAppState, loggedIn, setLoggedIn, redirect, re
 
         <div className="form">
           <div className="input-field">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email</label><br/>
             <input
               type="email"
               name="email"
@@ -89,7 +89,7 @@ export default function Login({ setAppState, loggedIn, setLoggedIn, redirect, re
           </div>
 
           <div className="input-field">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Password</label><br/>
             <input
               type="password"
               name="password"

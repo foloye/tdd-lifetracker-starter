@@ -6,13 +6,22 @@
     font-stretch: ultra-expanded;
 }
 
+.more {
+	text-align: center;
+	font-size: 24px;
+    font-family: Courier, monospace ;
+    
+}
+
 .stats {
     display: flex;
     justify-content: space-around ;
+	text-align: center;
 }
 .more-stats {
     display: flex;
     justify-content: space-around;
+	text-align: center;
 }
 
 .exercise-div{
@@ -29,19 +38,24 @@
     width: 300px;
 }
 .calories-div {
-    background-color: green;
+    background-color: #cbd19e;
     width: 300px;
     height: 100px;
 }
 .intensity-div{
-    background-color: white;
+    background-color: #2F97C1;
     width: 300px;
     height: 100px;
 }
 .hours-div {
-    background-color: green;
+    background-color: #BE92A2;
     width: 300px;
     height: 100px;
+}
+
+.buttons {
+	display: flex;
+	justify-content:space-around;
 }
 
 /* button {
@@ -60,11 +74,39 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #528ecc;
 } */
-button:hover {
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-	background-color:#378de5;
+
+.sLink, .eLink {
+	color: white;
+	text-decoration: none;
 }
-button:active {
+.nLink {
+	color: black;
+	text-decoration: none;
+}
+.eBtn:hover {
+	background:linear-gradient(to bottom, #2e3e99 5%, #3c8fe2 100%);
+	background-color:#3c8fe2;
+	border:1px solid #7e835f;
+}
+.eBtn:active {
+	position:relative;
+	top:1px;
+}
+.sBtn:hover {
+	background:linear-gradient(to bottom, #a0667b 5%, #6d4a57 100%);
+	background-color:#6d4a57;
+	border:1px solid #414239;
+}
+.sBtn:active {
+	position:relative;
+	top:1px;
+}
+.nBtn:hover {
+	background:linear-gradient(to bottom, #bec77f 5%, #7e835f 100%);
+	background-color:#7e835f;
+	border:1px solid #7e835f;
+}
+.nBtn:active {
 	position:relative;
 	top:1px;
 }
@@ -88,11 +130,11 @@ button:active {
 }
 
 .sBtn{
-    box-shadow: 3px 4px 0px 0px #1564ad;
+    box-shadow: 3px 4px 0px 0px #6d4a57;
 	/* background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
 	background-color:#79bbff; */
 	border-radius:5px;
-	border:1px solid #337bc4;
+	border:1px solid #6d4a57;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -101,16 +143,16 @@ button:active {
 	font-weight:bold;
 	padding:12px 44px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
+	text-shadow:0px 1px 0px #6d4a57;
     background-color: #BE92A2;
 }
 
 .nBtn{
-    box-shadow: 3px 4px 0px 0px #1564ad;
+    box-shadow: 3px 4px 0px 0px #7e835f;
 	/* background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
 	background-color:#79bbff; */
 	border-radius:5px;
-	border:1px solid #337bc4;
+	border:1px solid #7e835f;
 	display:inline-block;
 	cursor:pointer;
 	color:#000000;
@@ -119,6 +161,6 @@ button:active {
 	font-weight:bold;
 	padding:12px 44px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
+	text-shadow:0px 1px 0px #7e835f;
     background-color: #cbd19e
 }

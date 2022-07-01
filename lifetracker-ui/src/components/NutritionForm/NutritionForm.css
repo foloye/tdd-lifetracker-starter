@@ -1,12 +1,7 @@
-.closed{
-    display: none;
+.nLabel{
+    text-align: left;
 }
-
-.redirect{
-    color: darkred;
-}
-
-.card {
+.nutrition-form-card {
     background-color: white;
     width: 400px;
     text-align: center;
@@ -15,11 +10,16 @@
     border-style: solid;
 }
 
-.Login {
+.nutrition-form {
     display: flex;
     justify-content: space-around;
 }
 
 label{
     text-align: left;
+}
+
+.nSave{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }

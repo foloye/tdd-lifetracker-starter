@@ -1,0 +1,7 @@
+.nCards {
+    display: flex;
+    justify-content: space-around;
+}
+.overview{
+    text-align: left;
+}

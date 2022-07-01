@@ -12,6 +12,7 @@ export default function Navbar(props) {
     }
     function setSignOut() {
       props.setLoggedIn(false)
+      props.setAppState({})
     }
 
   return (
