@@ -106,7 +106,7 @@ The components in the `App.jsx` file should render the following components (alo
 
 - To build out the front-end, start with the `App.jsx` component:
 
-  - [ ] **`App.jsx`**
+  - [x] **`App.jsx`**
     - [ ] Should be wrapped by an element with the `className` of `app`
     - [ ] The core App component that contains the routes for the app wrapped in Context providers
     - [ ] Renders the `Navbar` component on every route
@@ -170,7 +170,7 @@ The components in the `App.jsx` file should render the following components (alo
     - [ ] Should render JSX that is wrapped by an element with the `className` of `loading`
     - [ ] Should render an element with the `className` of `loading-message` that contains the text `"Loading"`
 
-  - [ ] The **`Navbar.jsx`** component
+  - [x] The **`Navbar.jsx`** component
 
     - [ ] Should render JSX that is wrapped by a `nav` element with the `className` of `navbar`
     - [ ] Should render the app's logo:
@@ -220,7 +220,7 @@ The components in the `App.jsx` file should render the following components (alo
       - [ ] If the user is already logged in, it should redirect them to the `/activity` page
       - [ ] If no user is authenticated, it should render the `LoginForm.jsx` component and pass it any props it needs
 
-  - [ ] The **`RegistrationForm.jsx`** component:
+  - [] The **`RegistrationForm.jsx`** component:
 
     - [ ] Should render JSX that is wrapped by an element with the `className` of `registration-form`
     - [ ] Should render an input element for the following fields:
@@ -246,14 +246,14 @@ The components in the `App.jsx` file should render the following components (alo
       - [ ] It should contain the text `"Create Account"`
       - [ ] When clicked, it should call the `signupUser` function
 
-  - [ ] The **`RegistrationPage.jsx`** component:
+  - [x] The **`RegistrationPage.jsx`** component:
 
     - [ ] Should render JSX that is wrapped by an element with the `className` of `registration-page`
     - [ ] Using either a custom hook, context, or manually handled state, this component should check to see if a user is already logged in
       - [ ] If the user is already logged in, it should redirect them to the `/activity` page
       - [ ] If no user is authenticated, it should render the `RegistrationForm.jsx` component and pass it any props it needs
 
-  - [ ] The **`LandingPage.jsx`** component:
+  - [x] The **`LandingPage.jsx`** component:
 
     - [ ] Should render JSX that is wrapped by an element with the `className` of `landing-page`
     - [ ] Should render an element with the `className` of `hero`
@@ -339,7 +339,7 @@ The components in the `App.jsx` file should render the following components (alo
       - [ ] Make sure to pass an object containing all the state variables to the `value` prop of the `NutritionContext.Provider` component
     - [ ] Create and export a `useNutritionContext` hook that calls the `React.useContext` hook with the newly created `NutritionContext` and returns it.
 
-  - [ ] The **`NutritionPage.jsx`** component:
+  - [x] The **`NutritionPage.jsx`** component:
 
     - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-page`
     - [ ] Should render a nested `Routes` component from `react-router-dom`.
@@ -349,7 +349,7 @@ The components in the `App.jsx` file should render the following components (alo
         - [ ] The `/nutrition/id/:nutritionId` should render the `NutritionDetail.jsx` component
         - [ ] Any other route should render the `NotFound` component
 
-  - [ ] The **`NutritionOverview.jsx`** component:
+  - [x] The **`NutritionOverview.jsx`** component:
 
     - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-overview`
     - [ ] It should call the `useNutritionContext` hook and extract all the necessary data from it.
@@ -372,7 +372,7 @@ The components in the `App.jsx` file should render the following components (alo
     - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-new`
     - [ ] Should render the `NutritionForm.jsx` component and pass it the appropriate props
 
-  - [ ] The **`NutritionForm.jsx`** component:
+  - [x] The **`NutritionForm.jsx`** component:
 
     - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-form`
     - [ ] Should render an input element for the following fields:
@@ -406,7 +406,7 @@ The components in the `App.jsx` file should render the following components (alo
       - [ ] It should store the `nutrition` received by the request in state and then render a `NutritionCard.jsx` component for that nutrition.
       - [ ] If no `nutrition` is found with that `id`, it should render the `NotFound.jsx` component
 
-  - [ ] The **`NutritionCard.jsx`** component:
+  - [x] The **`NutritionCard.jsx`** component:
 
     - [ ] Should render JSX that is wrapped by an element with the `className` of `nutrition-card`
     - [ ] Should accept **at least** the following props:
@@ -448,30 +448,30 @@ Here are the pieces of functionality that should be built out for the backend:
   - [ ] Install new dependencies for `bcrypt`, `jsonwebtoken`, `colors`, `dotenv`, `pg`
   - [ ] Commit all work to `git`
   - [ ] Add a `.env` file to the root of the repo and include the following environment variables
-    - [ ] `PORT` (default to `3001`)
+    - [x] `PORT` (default to `3001`)
     - [ ] `SECRET_KEY` (set to a long random string)
-    - [ ] `BCRYPT_WORK_FACTOR` (set to `13`)
-    - [ ] `DATABASE_USER`
-    - [ ] `DATABASE_PASS`
-    - [ ] `DATABASE_HOST`
-    - [ ] `DATABASE_PORT`
-    - [ ] `DATABASE_NAME` - (set to `lifetracker`)
+    - [x] `BCRYPT_WORK_FACTOR` (set to `13`)
+    - [x] `DATABASE_USER`
+    - [x] `DATABASE_PASS`
+    - [x] `DATABASE_HOST`
+    - [x] `DATABASE_PORT`
+    - [x] `DATABASE_NAME` - (set to `lifetracker`)
     - [ ] `DATABASE_TEST_NAME` - (set to `lifetracker_test`)
   - [ ] Add a `config.test.js` file
     - [ ] Write tests that check to make sure that:
       - [ ] `process.env.NODE_ENV` is set to `test` when the test suite is run
       - [ ] There is an `IS_TESTING` variable that is exported, which should only be true if `process.env.NODE_ENV` is set to `test`
-    - [ ] Write tests to ensure that certain environment variables are exported from the `config.js` file and can be imported:
-      - [ ] `PORT`
+    - [x] Write tests to ensure that certain environment variables are exported from the `config.js` file and can be imported:
+      - [x] `PORT`
       - [ ] `SECRET_KEY`
-      - [ ] `BCRYPT_WORK_FACTOR`
+      - [x] `BCRYPT_WORK_FACTOR`
       - [ ] `IS_TESTING`
     - [ ] Write tests to ensure that a `getDatabaseUri` function is exported from the `config.js` file
       - [ ] The `getDatabaseUri` function should:
         - [ ] Check to see if a valid `process.env.DATABASE_URL` environment variable exists, and return that if it does.
         - [ ] When `IS_TESTING` is `true`, the `getDatabaseUri` function should use the test database
         - [ ] Otherwise, it should combine the proper database environment variables into a database connection string if no `process.env.DATABASE_URL` environment variable exists
-  - [ ] Add a `config.js` file
+  - [x] Add a `config.js` file
     - [ ] Use the `dotenv` package to parse the environment variables from the `.env` file.
     - [ ] Export each of the environment variables from the `config.js` file until the tests pass
     - [ ] Write a `getDatabaseUri` function so that all the tests pass
@@ -481,9 +481,9 @@ Here are the pieces of functionality that should be built out for the backend:
   - Time bring in a PostgreSQL database client as the application's persistence layer
   - Make sure the PostgreSQL server is running
   - Create two files at the root of the project:
-    - [ ] `lifetracker-schema.sql`
+    - [x] `lifetracker-schema.sql`
       - [ ] This script should:
-        - [ ] Create a `users` table with the following columns:
+        - [x] Create a `users` table with the following columns:
           - [ ] `id`
           - [ ] `username`
           - [ ] `password`
@@ -492,7 +492,7 @@ Here are the pieces of functionality that should be built out for the backend:
           - [ ] `email`
           - [ ] `created_at`
           - [ ] `updated_at`
-        - [ ] Create a `nutrition` table with the following columns:
+        - [x] Create a `nutrition` table with the following columns:
           - [ ] `id`
           - [ ] `name`
           - [ ] `category`
@@ -501,14 +501,14 @@ Here are the pieces of functionality that should be built out for the backend:
           - [ ] `user_id`
           - [ ] `created_at`
         - [ ] **Any other tables** that the application might depend on
-    - [ ] `lifetracker.sql`
+    - [x] `lifetracker.sql`
       - [ ] This script should:
         - [ ] 1. Let the user know that they're about to delete the `lifetracker` db and prompt them to confirm that is what they want.
         - [ ] 2. Drop the `lifetracker` database and then create a new `lifetracker` database, before connecting to the `lifetracker` database.
         - [ ] 3. It should then run the `lifetracker-schema.sql` file.
         - [ ] Follow the exact same steps for `1`, `2`, and `3`, but with the `lifetracker_test` database.
   - [ ] Setup the database by running `psql -f lifetracker.sql`
-  - [ ] Create a new file at the root of the project called `db.js`. In that file:
+  - [x] Create a new file at the root of the project called `db.js`. In that file:
     - [ ] Import the `getDatabaseUri` function from the `config.js` file.
     - [ ] Initialize a new postgres client with the `pg` package and connect to PostgreSQL using any necessary config variables.
     - [ ] Connect to postgres and log a message to the terminal on success or failure.
@@ -517,8 +517,8 @@ Here are the pieces of functionality that should be built out for the backend:
   - [ ] A database client is now ready to be used!
 - **Server**
   - [ ] Build out a bare-bones Express server with a healthcheck route and an adequate middleware pipeline.
-  - [ ] Create a `utils` directory
-    - [ ] In the `utils` directory, create an `errors.js` file.
+  - [x] Create a `utils` directory
+    - [x] In the `utils` directory, create an `errors.js` file.
     - [ ] Create error classes inside the file that will be used throughout the app.
   - [ ] In the `app.test.js` file, write tests that:
     - [ ] Ensure that the Express application responds to `GET` requests to the `/` route with a JSON object of `{ "ping": "pong" }`
@@ -655,7 +655,7 @@ Here are the pieces of functionality that should be built out for the backend:
   - [ ] There should now be a full-fledged authentication system in place!
 - **Resources and Permissions**
   - [ ] Next, implement the functionality to allow users to save instances of things they've drank/eaten, so that they can track their own nutrition data! Also make sure users can only access the data that they themselves have created. No other user should be able to see any data owned by another user!
-  - [ ] The **Nutrition** model
+  - [x] The **Nutrition** model
     - [ ] In the `models` directory, create two new files: `models/nutrition.js` and `models/nutrition.test.js`
       - [ ] The `Nutrition` model should have **at least** the following static methods:
         - [ ] `createNutrition`
