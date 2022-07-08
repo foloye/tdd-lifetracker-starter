@@ -40,10 +40,18 @@ class Nutrition {
 
 
     }
-    static async listNutritionForUser(user_id) {
+    static async listNutritionForUser(user) {
+
+        if(!user) {
+            throw new BadRequestError("bad user provided")
+        }
+
+        const userId = await db.query(`SELECT id FROM users where email = $1`, [user.email])
+        const id = userId.rows[0].id
+
         const query = `SELECT * FROM nutrition WHERE user_id =$1 `
 
-        const result = await db.query(query, [user_id])
+        const result = await db.query(query, [id])
 
         const nutrition = result.rows
 

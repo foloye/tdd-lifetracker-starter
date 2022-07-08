@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
 import "./NutritionForm.css"
+import apiClient from "components/services/apiClient"
+
 
 export default function NutritionForm(props) {
   const navigate = useNavigate()
@@ -14,27 +16,45 @@ export default function NutritionForm(props) {
     calories: "",
     image_url: "",
   })
-  console.log("appstate id", props.appState.user.id)
+  // console.log("appstate id", props.appState.user.id)
   
 
   const handleOnInputChange = (event) => {
     setForm((f) => ({ ...f, [event.target.name]: event.target.value }))
   }
 
-  console.log("id number", props.appState)
+  // console.log("id number", props.appState)
   const handleOnSubmit = async () => {
     setIsLoading(true)
     setErrors((e) => ({ ...e, form: null }))
 
     try {
-      const res = await axios.post("http://localhost:3001/nutrition/", {
+      const {data, error} = await apiClient.createNutrition({
         name: form.name,
         category: form.category,
         calories: form.calories,
         image_url: form.image_url,
         user_id: props.appState.user.id,
+        // headers: {
+        //   "Content-Type": "application/json",
+        //   Authorization: `Bearer ${props.appState.token}`,
+        // },
       })
+      if (error) {
+        setErrors(error)
+      }
+      if (data) {
         navigate("/nutrition")
+        setForm({
+          name: "",
+          category: "",
+          quantity: "",
+          calories: "",
+          image_url: "",
+        })
+      }
+      setIsLoading(false);
+      
     //   if (res?.data?.user) {
         
         

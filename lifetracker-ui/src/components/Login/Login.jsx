@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
-// import undraw_medical_research from "../../assets/undraw_medical_research_deep_blue.svg"
 import "./Login.css"
+import apiClient from "components/services/apiClient"
 
-export default function Login({ setAppState, loggedIn, setLoggedIn, redirect, redirectInfo, setRedirect, setRedirectInfo }) {
+export default function Login({ setAppState, message, loggedIn, setLoggedIn, redirect, redirectInfo, setRedirect, setRedirectInfo }) {
   const navigate = useNavigate()
   const [isLoading, setIsLoading] = useState(false)
   const [errors, setErrors] = useState({})
@@ -39,23 +39,42 @@ export default function Login({ setAppState, loggedIn, setLoggedIn, redirect, re
     setErrors((e) => ({ ...e, form: null }))
 
     try {
-      const res = await axios.post(`http://localhost:3001/auth/login`, form)
-      if (res?.data) {
-        let nav = "/"
-        if (redirect){
-          nav = "/"+redirectInfo
-        }
-        setAppState(res.data)
+      
+      const { data, error } = await apiClient.loginUser({ email: form.email, password: form.password })
+      if (error)
+      {
+        setErrors((e) => ({ ...e, form: "Invalid username/password combination" }))
+      }
+      if (data?.user)
+      {
+        setAppState(data.user)
+        apiClient.setToken(data.token)
+        setAppState(data)
         setIsLoading(false)
+        setLoggedIn(true)
         setNav(true)
         setRedirect(false)
         setRedirectInfo("")
-        navigate(nav)
-        
-      } else {
-        setErrors((e) => ({ ...e, form: "Invalid username/password combination" }))
-        setIsLoading(false)
+        navigate("/nutrition");
       }
+      setIsLoading(false);
+      // const res = await axios.post(`http://localhost:3001/auth/login`, form)
+      // if (res?.data) {
+      //   let nav = "/"
+      //   if (redirect){
+      //     nav = "/"+redirectInfo
+      //   }
+      //   setAppState(res.data)
+      //   setIsLoading(false)
+      //   setNav(true)
+      //   setRedirect(false)
+      //   setRedirectInfo("")
+      //   navigate(nav)
+        
+      // } else {
+      //   setErrors((e) => ({ ...e, form: "Invalid username/password combination" }))
+      //   setIsLoading(false)
+      // }
     } catch (err) {
       console.log(err)
       const message = err?.response?.data?.error?.message
@@ -69,7 +88,7 @@ export default function Login({ setAppState, loggedIn, setLoggedIn, redirect, re
       <div className="card">
         <h2>Login</h2>
 
-        
+        {errors.form || message ? <span className="error">{errors.form || message}</span>: null}
         <h4 className={pageDirect}>You must be logged in to access the {redirectInfo} page.</h4>
 
         {Boolean(errors.form) && <span className="error">{errors.form}</span>}

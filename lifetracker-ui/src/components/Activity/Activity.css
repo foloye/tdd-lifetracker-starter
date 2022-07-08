@@ -1,15 +1,15 @@
 .title{
     text-align: center;
-    font-size: 24px;
-    font-family: Courier, monospace ;
+    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
     font-variant: small-caps;
     font-stretch: ultra-expanded;
 }
 
 .more {
 	text-align: center;
-	font-size: 24px;
-    font-family: Courier, monospace ;
+	font-size: 34px;
+    font-family: 'Varela Round', sans-serif;
     
 }
 
@@ -28,34 +28,63 @@
     background-color: #2F97C1;
     width: 300px;
     height: 175px;
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	/* background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%); */
+	/* background-color:#79bbff; */
+	border-radius:5px;
+	border:1px solid #337bc4;
 }
 .sleep-div{
     background-color: #BE92A2;
     width: 300px;
+	box-shadow: 3px 4px 0px 0px #6d4a57;
+	
+	border-radius:5px;
+	border:1px solid #6d4a57;
 }
 .nutrition-div{
     background-color: #cbd19e;
     width: 300px;
+	box-shadow: 3px 4px 0px 0px #7e835f;
+	border-radius:5px;
+	border:1px solid #7e835f;
 }
 .calories-div {
     background-color: #cbd19e;
     width: 300px;
-    height: 100px;
+    height: 115px;
+	box-shadow: 3px 4px 0px 0px #7e835f;
+	border-radius:5px;
+	border:1px solid #7e835f;
+	
+
 }
 .intensity-div{
     background-color: #2F97C1;
     width: 300px;
-    height: 100px;
+    height: 115px;
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	/* background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%); */
+	/* background-color:#79bbff; */
+	border-radius:5px;
+	border:1px solid #337bc4;
 }
 .hours-div {
     background-color: #BE92A2;
     width: 300px;
-    height: 100px;
+    height: 115px;
+	box-shadow: 3px 4px 0px 0px #6d4a57;
+	
+	border-radius:5px;
+	border:1px solid #6d4a57;
 }
 
 .buttons {
 	display: flex;
 	justify-content:space-around;
+}
+.space{
+	height: 2em;
 }
 
 /* button {

@@ -1,8 +1,11 @@
 .nutrition{
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
 }
 
 .btnRec{
     text-align: right;
     margin-right: 200px;
+    margin-top: 35px;
 }

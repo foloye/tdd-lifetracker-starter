@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
 import "./Register.css"
+import apiClient from "components/services/apiClient"
 
 export default function Register({ setAppState, loggedIn, setLoggedIn, redirect, redirectInfo, setRedirect, setRedirectInfo}) {
   const navigate = useNavigate()
@@ -60,29 +61,52 @@ export default function Register({ setAppState, loggedIn, setLoggedIn, redirect,
     }
 
     try {
-      const res = await axios.post("http://localhost:3001/auth/register", {
-        username: form.username,
-        first_name: form.first_name,
-        last_name: form.last_name,
-        email: form.email,
-        password: form.password,
-      })
+      // const res = await axios.post("http://localhost:3001/auth/register", {
+      //   username: form.username,
+      //   first_name: form.first_name,
+      //   last_name: form.last_name,
+      //   email: form.email,
+      //   password: form.password,
+      // })
 
-      if (res?.data?.user) {
-        let nav = "/"
-        if (redirect){
-          nav = "/"+redirectInfo
-        }
-        setAppState(res.data)
+      // if (res?.data?.user) {
+      //   let nav = "/"
+      //   if (redirect){
+      //     nav = "/"+redirectInfo
+      //   }
+      //   setAppState(res.data)
+      //   setIsLoading(false)
+      //   setNav(true)
+      //   setRedirect(false)
+      //   setRedirectInfo("")
+      //   navigate(nav)
+        
+      // } else {
+      //   setErrors((e) => ({ ...e, form: "Something went wrong with registration" }))
+      //   setIsLoading(false)
+      // }
+      const { data, error } = await apiClient.signupUser({
+        first_name: form.first_name,
+         last_name: form.last_name,
+         email: form.email,
+         password: form.password,
+        username: form.username
+      })
+      if (error)
+      {
+        setErrors((e) => ({ ...e, form: error }))
+        setIsLoading(false);
+      }
+      if (data?.user)
+      {
+        setAppState(data.user);
+        apiClient.setToken(data.token)
         setIsLoading(false)
+        setLoggedIn(true)
         setNav(true)
         setRedirect(false)
         setRedirectInfo("")
-        navigate(nav)
-        
-      } else {
-        setErrors((e) => ({ ...e, form: "Something went wrong with registration" }))
-        setIsLoading(false)
+        navigate("/nutriton")
       }
     } catch (err) {
       console.log(err)

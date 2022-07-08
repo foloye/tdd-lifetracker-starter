@@ -1,19 +1,21 @@
 import * as React from "react"
 import "./Navbar.css"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import apiClient from "components/services/apiClient"
 
 export default function Navbar(props) {
-    console.log(props.loggedIn)
+    // console.log(props.loggedIn)
     let signup = "open"
     let signout = "closed"
     if (props.loggedIn){
       signup = "closed"
       signout = "open"
     }
-    function setSignOut() {
-      props.setLoggedIn(false)
-      props.setAppState({})
-    }
+    // function setSignOut() {
+    //   props.setLoggedIn(false)
+    //   props.setAppState({})
+    //   // apiClient.logoutUser()
+    // }
 
   return (
     <nav className="navbar">
@@ -43,7 +45,7 @@ export default function Navbar(props) {
           <Link className="dropdown-item" to="/register">Sign Up</Link>
         </li>
         <li  className={signout}>
-          <Link className="dropdown-item" onClick={setSignOut} to="/">Sign Out</Link>
+          <Link className="dropdown-item" onClick={props.handleLogout} to="/">Sign Out</Link>
         </li>
         
       </ul>

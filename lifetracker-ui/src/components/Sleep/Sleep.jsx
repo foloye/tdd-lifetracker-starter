@@ -15,7 +15,10 @@ export default function Sleep(props) {
 
   return (
     <div className="sleep">
-        <h2>Sleep</h2>
+        <h1>Sleep</h1>
+        <div className="tbdS">
+          <h2>Nothing to show yet.</h2>
+        </div>
         
         
     </div>

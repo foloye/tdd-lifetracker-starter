@@ -1,11 +1,16 @@
 const express = require("express")
 const Nutrition = require("../models/nutrition")
 const router = express.Router()
+const security = require("../middleware/security")
+const User = require("../models/user")
 
 
-router.get("/", async (req, res, next) => {
+router.get("/", security.requireAuthenticatedUser, async (req, res, next) => {
     try {
-        const user = 1
+        const {username} = res.locals.user
+        
+        const user = await User.fetchUserByUsername(username) 
+        
         const nutrition = await Nutrition.listNutritionForUser(user)
         
         return res.status(200).json({ "nutrition": nutrition })
@@ -13,8 +18,9 @@ router.get("/", async (req, res, next) => {
         next(err)
     }
 })
-router.post("/", async (req, res, next) => {
+router.post("/", security.requireAuthenticatedUser, async (req, res, next) => {
     try {
+        console.log("This is post req.body ", req.body)
         const nutrition = await Nutrition.createNutrition(req.body)
         
         return res.status(201).json({ "nutrition": {nutrition} })
@@ -22,7 +28,7 @@ router.post("/", async (req, res, next) => {
         next(err)
     }
 })
-router.get("/id/:nutritionId", async (req, res, next) => {
+router.get("/id/:nutritionId", security.requireAuthenticatedUser, async (req, res, next) => {
     try {
         const nutritionId = Number(req.params.nutritionId)
         const nutrition = await Nutrition.fetchNutritionById(nutritionId)
@@ -33,5 +39,6 @@ router.get("/id/:nutritionId", async (req, res, next) => {
     }
 })
 
+  
 
 module.exports = router

@@ -61,6 +61,10 @@ class User {
         if (existingUser) {
             throw new BadRequestError(`Duplicate email: ${credentials.email}`)
         }
+        const existingUsername = await User.fetchUserByUsername(credentials.username)
+        if (existingUsername) {
+            throw new BadRequestError(`Duplicate username: ${credentials.username}`)
+        }
         //take the users pass and hash it
         const hashedPassword = await bcrypt.hash(credentials.password, parseInt(dbBcrypt) )
 
@@ -93,6 +97,18 @@ class User {
         const query = `SELECT * FROM users WHERE email = $1`
 
         const result = await db.query(query, [email.toLowerCase()])
+
+        const user = result.rows[0]
+
+        return user
+    }
+    static async fetchUserByUsername(username) {
+        if (!username) {
+            throw new BadRequestError("No username provided")
+        }
+        const query = `SELECT * FROM users WHERE username = $1`
+
+        const result = await db.query(query, [username.toLowerCase()])
 
         const user = result.rows[0]
 
