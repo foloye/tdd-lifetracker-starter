@@ -40,21 +40,25 @@ Implement any of the following features to improve the application:
 
 ### Walkthrough Video
 
-[![video of webstie]({https://www.amazon.com/Apple-Watch-GPS-44MM-Aluminum/dp/B0849ST9TT})]({https://www.loom.com/share/d55cbc2e513446c4a5f0cb441aae03f4} "Video of lifetracker webstie")
+![Video of website](https://www.loom.com/share/d55cbc2e513446c4a5f0cb441aae03f4)
+
+^Couldn't get loom to render in readme
+https://www.loom.com/share/d55cbc2e513446c4a5f0cb441aae03f4
+
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-The vaccine hub assignment was very helpful for creating the backend for this assignment, and the sql challenges were helfpul for the query searches.
+The first lab was really good at teaching jwt tokens, I defintely wouldn't have been able to do it without it.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-If I had more time, I would find the bug that makes items not update as someone adds them to their nutirition table.
+If I had more time, I would implement the exercise and sleep pages, and I would change the styling of my website.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-During my demo, I think I went over all the features I've done well, but I think I was a bit flustered cause zoom was crashing right before I went on.
+My demo wasn't the best this week, I don't think I properly showed all the features I had actually implemented. I think next time I might practice what I want to say before I actually do it.
 
 ### Open-source libraries used
 
@@ -64,4 +68,4 @@ During my demo, I think I went over all the features I've done well, but I think
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
-Shout out to my partner Andrew, we made a lot of progress this week.
+Shout out to Andrew and Evans, we made a lot of good progress this week.
